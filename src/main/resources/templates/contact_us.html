@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>Home</title>
+  <style>
+    .navbar {
+      background-color: red;
+    }
+
+    .top {
+      text-decoration: none;
+      display: flex;
+      margin: -200px 20px;
+      position: sticky;
+      bottom: 20px;
+      width: fit-content;
+    }
+
+
+    .btn {
+      background-color: rgb(223, 160, 59);
+    }
+
+    .btn:hover {
+      transition: background-color 0.3s;
+      background-color: rgb(224, 68, 68);
+    }
+
+    .nav-item {
+      color: aliceblue;
+    }
+
+    .nav-item:hover,
+    .active {
+      transition: background-color 0.3s;
+      background-color: rgb(216, 5, 5);
+      border-radius: 5px;
+    }
+
+
+
+
+
+
+
+    footer {
+      background-color: red;
+      display: flex;
+      padding: 10px;
+      align-items: center;
+      color: aliceblue;
+      justify-content: center;
+    }
+
+    footer div {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer_links ul li {
+      list-style: none;
+    }
+
+    .footer_links {
+      border-right: 1px solid white;
+    }
+
+    .footer_links ul li a {
+      color: aliceblue;
+      text-decoration: none;
+    }
+
+    .footer_links ul li a:hover {
+      transition: color .4s, text-decoration 1s;
+      color: rgb(168, 172, 176);
+      text-decoration: underline;
+    }
+
+    .contact_us_main {
+      display: flex;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .contact_us_form {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      background-color: rgb(255, 255, 255);
+      color: black;
+      box-shadow: 5px 5px 15px black;
+      border-radius: 5px;
+      padding-bottom: 10px;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+
+    .contact_us_form form table tr td {
+      /* color: white; */
+      padding: 10px 20px;
+    }
+
+    .contact_us_form form table tr td input,
+    textarea {
+      border: 1px solid black;
+      padding: 3px 10px;
+      border-radius: 5px;
+    }
+
+
+
+    .contact_us_form form table tr td input:focus {
+      border: 2px solid rgba(76, 76, 255, 0.598);
+      transition: border .3s;
+    }
+
+    #contact_us_submit_btn,
+    #contact_us_reset_btn {
+      border: none;
+      background-color: rgb(81, 239, 73);
+      transition: background-color .3s;
+      color: rgb(4, 7, 196);
+      font-weight: bold;
+      padding: 5px;
+      width: 100px;
+      border-radius: 5px;
+      box-shadow: 5px 5px 15px black;
+    }
+
+    #contact_us_reset_btn {
+      background-color: rgb(255, 217, 0);
+      color: rgb(218, 11, 204);
+    }
+
+    #contact_us_reset_btn:hover {
+      background-color: rgb(216, 200, 109);
+    }
+
+    #contact_us_submit_btn:hover {
+      background-color: rgb(34, 192, 22);
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand">News</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#" style="color: aliceblue;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: aliceblue;">Latest News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about_us.html" style="color: aliceblue;">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#" style="color: aliceblue;">Contact Us</a>
+          </li>
+
+
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="contact_us_main">
+
+    <div class="contact_us_form">
+      <form action="#">
+        <table>
+          <tr>
+            <td><label for="name">Name :</label></td>
+            <td><input type="text" placeholder="Name" required></td>
+          </tr>
+          <tr>
+            <td><label for="name">Email :</label></td>
+            <td><input type="email" required placeholder="Email"></td>
+          </tr>
+          <tr>
+            <td><label for="name">Mobile No :</label></td>
+            <td><input type="number" placeholder="Mobile" required></td>
+          </tr>
+          <tr>
+            <td><label for="name">Query :</label></td>
+            <td><textarea name="" id="" cols="23" rows="3" placeholder="Enter Query" required></textarea></td>
+          </tr>
+        </table>
+        <div style="text-align: center;">
+          <button type="submit" id="contact_us_submit_btn">Submit</button>
+          <button type="reset" id="contact_us_reset_btn">Reset</button>
+        </div>
+      </form>
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+  <footer>
+    <div class="footer_links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="contact_us.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer_address">
+      <h6>Address</h6>
+      <span>At Hisare, Post Phisare,<br>Tal Karmala,<br>Solapur 413203</span>
+    </div>
+  </footer>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

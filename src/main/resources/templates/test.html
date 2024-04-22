@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Home</title>
+  <style>
+    .navbar {
+      background-color: red;
+    }
+
+    .top {
+      text-decoration: none;
+      display: flex;
+      margin: -200px 20px;
+      position: sticky;
+      bottom: 20px;
+      width: fit-content;
+    }
+
+
+    .btn {
+      background-color: rgb(223, 160, 59);
+    }
+
+    .btn:hover {
+      transition: background-color 0.3s;
+      background-color: rgb(224, 68, 68);
+    }
+
+    .nav-item {
+      color: aliceblue;
+    }
+
+    .nav-item:hover,
+    .active {
+      transition: background-color 0.3s;
+      background-color: rgb(216, 5, 5);
+      border-radius: 5px;
+    }
+
+
+
+
+
+
+
+    footer {
+      background-color: red;
+      display: flex;
+      padding: 10px;
+      align-items: center;
+      color: aliceblue;
+      justify-content: center;
+    }
+
+    footer div {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer_links ul li {
+      list-style: none;
+    }
+
+    .footer_links {
+      border-right: 1px solid white;
+    }
+
+    .footer_links ul li a {
+      color: aliceblue;
+      text-decoration: none;
+    }
+
+    .footer_links ul li a:hover {
+      transition: color .4s, text-decoration 1s;
+      color: rgb(168, 172, 176);
+      text-decoration: underline;
+    }
+
+    .main_content {
+      display: flex;
+      justify-content: center;
+    }
+
+    .main_content div {
+      padding: 10px;
+    }
+
+    .main {
+      border-right: 1px solid black;
+      display: flex;
+      width: 88%;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .important_links {
+      width: 16%;
+    }
+
+    .main a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .main div {
+      min-width: 150px;
+      margin: 5px;
+      max-width: 250px;
+      background-color: white;
+      flex-wrap: 1;
+      border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .my_container h5 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: 900;
+    }
+
+    .my_container p {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .my_container span {
+      font-size: 12px;
+    }
+
+    .my_container h5:hover {
+      color: rgb(242, 79, 79);
+      text-decoration: underline;
+    }
+
+    .my_container p:hover {
+      cursor: text;
+    }
+
+    .my_container img {
+      width: 100%;
+      padding: 10px 0px;
+    }
+
+
+
+
+    @media screen and (max-width: 954px) {
+      .main_content {
+        flex-direction: column;
+      }
+
+      .main {
+        border: none;
+        width: 100%;
+      }
+
+      .important_links {
+        width: 100%;
+      }
+
+
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand" th:text="${  title }">News</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: aliceblue;">Latest News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: aliceblue;">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: aliceblue;">Contact Us</a>
+          </li>
+
+
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <option th:each="i : ${#numbers.sequence( 1, 81/20)}">
+    <p th:text="${ i }"></p> <!-- THIS loops 4 times, instead of 5 -->
+ </option>
+
+ <option value="" th:each="i : ${#numbers.sequence(0, 5, 2)}">
+    <p th:text="${ i }"></p>
+ </option>
+
+    
+
+
+
+
+
+  <footer>
+    <div class="footer_links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="latest.html">Latest</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="contact_us.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer_address">
+      <h6>Address</h6>
+      <span>At Hisare, Post Phisare,<br>Tal Karmala,<br>Solapur 413203</span>
+
+    </div>
+  </footer>
+
+  <a href="index.html " class="top">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+        class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+        <path
+          d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
+      </svg>
+    </div>
+  </a>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
