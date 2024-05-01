@@ -9,8 +9,9 @@ public class RawScore {
     private int run;
     private String delivery;
     private String commentry;
+    private String outOrNotOut;
 
-    public RawScore(int over, int ball, String batsman, String boller, int batsmanRun, String delivery, String commentry) {
+    public RawScore(int over, int ball, String batsman, String boller, int batsmanRun, String delivery, String commentry, String outOrNotOut) {
         this.over = over;
         this.ball = ball;
         this.batsman = batsman;
@@ -18,6 +19,7 @@ public class RawScore {
         this.run = batsmanRun;
         this.delivery = delivery;
         this.commentry = commentry;
+        this.outOrNotOut = outOrNotOut;
     }
 
     public RawScore(){}
@@ -79,12 +81,24 @@ public class RawScore {
         this.boller = boller;
     }
 
-    @Override
-    public String toString() {
-        return "Score [over=" + over + ", ball=" + ball + ", batsman=" + batsman + ", boller=" + boller
-                + ", Run=" + run + ", delivery=" + delivery + ", commentry=" + commentry + "]";
+
+    public String getOutOrNotOut() {
+        return outOrNotOut;
     }
 
+    public void setOutOrNotOut(String outOrNotOut) {
+        this.outOrNotOut = outOrNotOut;
+    }
+
+    @Override
+    public String toString() {
+        return "RawScore [over=" + over + ", ball=" + ball + ", batsman=" + batsman + ", boller=" + boller + ", run="
+                + run + ", delivery=" + delivery + ", commentry=" + commentry + ", outOrNotOut=" + outOrNotOut + "]";
+    }
+
+    
+
+    
 
     
 }
